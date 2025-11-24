@@ -34,10 +34,10 @@ export default defineNuxtConfig({
       ],
       noscript: [{ children: 'JavaScript is required' }],
     },
-    pageTransition: {
-      name: 'page',
-      mode: 'out-in',
-    },
+    // pageTransition: {
+    //   name: 'page',
+    //   mode: 'out-in',
+    // },
   },
 
   modules: [

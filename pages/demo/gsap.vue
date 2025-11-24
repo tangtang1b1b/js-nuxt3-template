@@ -19,13 +19,7 @@ const transitionOption = ref([
   { name: 'blurTransition', mode: blurTransition },
 ])
 
-const marquee2 = ref([
-  '/images/logo.png',
-  '/images/logo.png',
-  '/images/logo.png',
-  '/images/logo.png',
-  '/images/logo.png',
-])
+const marquee2 = ref(['/images/logo.png'])
 
 // GSAP常用的幾種方法:
 /**
@@ -35,7 +29,7 @@ const func_1 = () => {
   $gsap.to(dom.value, {
     motionPath: {
       path: '#carPath',
-      autoRotate: true
+      autoRotate: true,
     },
     duration: 10,
     ease: 'none',
@@ -44,8 +38,8 @@ const func_1 = () => {
       trigger: trigger.value,
       scrub: true, // 跟隨滾動執行動畫
       start: 'top top',
-      end: 'bottom top'
-    }
+      end: 'bottom top',
+    },
   })
 }
 /**
@@ -67,7 +61,7 @@ const func_2 = () => {
     },
     onLeaveBack: (elements) => {
       $gsap.to(elements, { opacity: 0, y: '50px' })
-    }
+    },
   })
 }
 /**
@@ -81,21 +75,23 @@ const func_3 = () => {
     trigger: trigger.value,
     start: 'top top',
     end: 'bottom top',
-    scrub: true // 跟隨滾動執行動畫
+    scrub: true, // 跟隨滾動執行動畫
   })
 
   tl.to(dom.value, {
     y: '50%',
     ease: 'none',
-    onComplete: () => {
-    }
+    onComplete: () => {},
   })
-  tl.to(dom.value, {
-    y: '80%',
-    ease: 'none',
-    onComplete: () => {
-    }
-  }, '<')
+  tl.to(
+    dom.value,
+    {
+      y: '80%',
+      ease: 'none',
+      onComplete: () => {},
+    },
+    '<',
+  )
 }
 </script>
 
@@ -127,7 +123,7 @@ const func_3 = () => {
       </div>
       <div class="relative flex h-[100px] items-center">
         <Transition v-bind="selected">
-          <div :key="number" class="font-extra-bold absolute top-0 h-full text-center text-7xl italic text-txt-light">
+          <div :key="number" class="font-extra-bold text-txt-light absolute top-0 h-full text-center text-7xl italic">
             {{ number }}
           </div>
         </Transition>
@@ -138,23 +134,51 @@ const func_3 = () => {
       <ModalMarquee class="bg-black" :data="marquee2">
         <template #default="{ slotData }">
           <div class="marquee | flex w-full shrink-0 text-2xl">
-            <img class="object-cover px-5" :src="fetchImg(i)" :style="{ width: `${100 / slotData.length}%`, height: '100%' }" v-for="i in slotData" :key="i" />
+            <img
+              class="object-cover px-5"
+              :src="fetchImg(i)"
+              :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
+              v-for="i in slotData"
+              :key="i"
+            />
           </div>
           <div class="marquee | flex w-full shrink-0 text-2xl">
-            <img class="object-cover px-5" :src="fetchImg(i)" :style="{ width: `${100 / slotData.length}%`, height: '100%' }" v-for="i in slotData" :key="i" />
+            <img
+              class="object-cover px-5"
+              :src="fetchImg(i)"
+              :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
+              v-for="i in slotData"
+              :key="i"
+            />
           </div>
         </template>
       </ModalMarquee>
       <ModalMarquee class="bg-black" :data="marquee2" reverse>
         <template #default="{ slotData }">
           <div class="marquee-reverse | flex w-full shrink-0 text-2xl">
-            <img class="object-cover px-5" :src="fetchImg(i)" :style="{ width: `${100 / slotData.length}%`, height: '100%' }" v-for="i in slotData" :key="i" />
+            <img
+              class="object-cover px-5"
+              :src="fetchImg(i)"
+              :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
+              v-for="i in slotData"
+              :key="i"
+            />
           </div>
           <div class="marquee-reverse | flex w-full shrink-0 text-2xl">
-            <img class="object-cover px-5" :src="fetchImg(i)" :style="{ width: `${100 / slotData.length}%`, height: '100%' }" v-for="i in slotData" :key="i" />
+            <img
+              class="object-cover px-5"
+              :src="fetchImg(i)"
+              :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
+              v-for="i in slotData"
+              :key="i"
+            />
           </div>
         </template>
       </ModalMarquee>
+    </div>
+    <div class="relative flex w-screen flex-col gap-5 py-10 lg:-left-40">
+      <h2 class="mb-5 mt-10 w-full text-2xl font-bold lg:mx-auto lg:max-w-[1600px]">跑馬燈2</h2>
+      <ModalMarqueeNormal :duration="15" spacing="px-5" :data="marquee2"></ModalMarqueeNormal>
     </div>
     <div class="flex flex-col gap-5 py-10">
       <h2 class="mb-5 mt-10 text-2xl font-bold">進場效果</h2>
