@@ -86,7 +86,7 @@ onMounted(() => {
           </div>
         </slot>
       </div>
-      <div class="pointer-events-none absolute top-0 z-2 flex h-full w-full items-center justify-between px-5">
+      <div class="pointer-events-none absolute top-0 z-[2] flex h-full w-full items-center justify-between px-5">
         <div
           :id="`${id}swiperPrev`"
           class="swiper-button-prev | group pointer-events-auto cursor-pointer rounded-full bg-white/50 p-4 duration-300 hover:bg-white"

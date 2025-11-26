@@ -33,7 +33,7 @@ const imageWidth = computed(() => {
       <div class="flex shrink-0 whitespace-nowrap">
         <img
           :class="[height, 'shrink-0 object-contain', spacing]"
-          :src="fetchImg(i)"
+          :src="i"
           :style="{ width: imageWidth }"
           v-for="(i, index) in data"
           :key="`group1-${index}`"
@@ -43,7 +43,7 @@ const imageWidth = computed(() => {
       <div class="flex shrink-0 whitespace-nowrap">
         <img
           :class="[height, 'shrink-0 object-contain', spacing]"
-          :src="fetchImg(i)"
+          :src="i"
           :style="{ width: imageWidth }"
           v-for="(i, index) in data"
           :key="`group2-${index}`"

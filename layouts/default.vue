@@ -1,8 +1,8 @@
 <script setup>
 import { useAllStore } from '@/store/all'
+import siteData from '@/data/index.js'
 const { allData } = toRefs(useAllStore())
-const { data } = await fetchRestful({ apiPath: '/data/index.json' })
-allData.value = data
+allData.value = siteData
 
 await useLoadingHandler().setLoadingComplete()
 </script>

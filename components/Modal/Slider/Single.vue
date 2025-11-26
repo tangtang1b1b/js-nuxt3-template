@@ -85,11 +85,11 @@ onMounted(() => {
       <div class="swiper-wrapper">
         <slot :slot-slide-data="slideData" :slot-index="nowIndex">
           <div class="swiper-slide" v-for="(slide, index) in slideData" :key="index">
-            <img class="size-full rounded-xl object-cover" :src="fetchImg(slide)" alt="slide" />
+            <img class="size-full rounded-xl object-cover" :src="slide" alt="slide" />
           </div>
         </slot>
       </div>
-      <div class="pointer-events-none absolute top-0 z-2 flex h-full w-full items-center justify-between px-5">
+      <div class="pointer-events-none absolute top-0 z-[2] flex h-full w-full items-center justify-between px-5">
         <div
           @click="slidePrev"
           :id="`${id}swiperPrev`"

@@ -23,11 +23,11 @@ onUnmounted(() => {})
 </script>
 
 <template>
-  <header :class="[isScroll ? 'shadow-nav' : '']" class="fixed left-0 top-0 z-100 h-[70px] w-full bg-black">
+  <header :class="[isScroll ? 'shadow-nav' : '']" class="fixed left-0 top-0 z-[100] h-[70px] w-full bg-black">
     <div class="z-50 mx-auto flex size-full max-w-screen-3xl items-center justify-between bg-black px-5 duration-300">
       <div class="flex h-full w-40 items-center justify-center">
         <NuxtLink to="/" class="size-full content-center">
-          <img class="w-full" :src="fetchImg('/images/logo.png')" alt="logo" />
+          <img class="w-full" src="/images/logo.png" alt="logo" />
         </NuxtLink>
       </div>
       <!-- <ul class="flex size-full justify-end dev-red">

@@ -136,7 +136,7 @@ const func_3 = () => {
           <div class="marquee | flex w-full shrink-0 text-2xl">
             <img
               class="object-cover px-5"
-              :src="fetchImg(i)"
+              :src="i"
               :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
               v-for="i in slotData"
               :key="i"
@@ -145,7 +145,7 @@ const func_3 = () => {
           <div class="marquee | flex w-full shrink-0 text-2xl">
             <img
               class="object-cover px-5"
-              :src="fetchImg(i)"
+              :src="i"
               :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
               v-for="i in slotData"
               :key="i"
@@ -158,7 +158,7 @@ const func_3 = () => {
           <div class="marquee-reverse | flex w-full shrink-0 text-2xl">
             <img
               class="object-cover px-5"
-              :src="fetchImg(i)"
+              :src="i"
               :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
               v-for="i in slotData"
               :key="i"
@@ -167,7 +167,7 @@ const func_3 = () => {
           <div class="marquee-reverse | flex w-full shrink-0 text-2xl">
             <img
               class="object-cover px-5"
-              :src="fetchImg(i)"
+              :src="i"
               :style="{ width: `${100 / slotData.length}%`, height: '100%' }"
               v-for="i in slotData"
               :key="i"

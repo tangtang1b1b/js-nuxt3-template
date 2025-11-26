@@ -39,7 +39,7 @@ watch(selected, () => {
 </script>
 
 <template>
-  <div class="relative z-1 w-full">
+  <div class="relative z-[1] w-full">
     <div
       :id="id"
       @click.stop="isClick = !isClick"

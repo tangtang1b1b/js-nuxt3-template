@@ -30,7 +30,7 @@ const closeModal = () => {
           <div class="flex items-center justify-center bg-black lg:h-full">
             <slot>
               <video class="h-full" controls autoplay muted controlsList="nodownload">
-                <source :src="fetchImg('/video/video.mp4')" type="video/mp4" />
+                <source src="/video/video.mp4" type="video/mp4" />
               </video>
             </slot>
           </div>

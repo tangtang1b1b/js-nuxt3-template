@@ -41,7 +41,7 @@ const closeModal = () => {
             <ModalSliderBasic id="default_slider" pagination-id="default_slider_Pagination" :slide-data="items" :autoplay="false">
               <template #default="{ slotSlideData, slotIndex }">
                 <div class="swiper-slide" v-for="(slide, index) in slotSlideData" :key="index">
-                  <img class="aspect-[16/9] size-full rounded-lg object-cover" :src="fetchImg(slide)" alt="slide" />
+                  <img class="aspect-[16/9] size-full rounded-lg object-cover" :src="slide" alt="slide" />
                 </div>
               </template>
             </ModalSliderBasic>

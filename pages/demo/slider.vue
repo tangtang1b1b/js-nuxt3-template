@@ -17,7 +17,7 @@ const items = ref([
       <ModalSliderSingle id="single_slider" pagination-id="single_slider_Pagination" :slide-data="items" :autoplay="false">
         <template #default="{ slotSlideData, slotIndex }">
           <div class="swiper-slide" v-for="slide in slotSlideData" :key="slide.src">
-            <img class="w-[420px] aspect-[16/9] rounded-xl object-cover" :src="fetchImg(slide)" alt="slide" />
+            <img class="w-[420px] aspect-[16/9] rounded-xl object-cover" :src="slide" alt="slide" />
           </div>
         </template>
       </ModalSliderSingle>
@@ -25,7 +25,7 @@ const items = ref([
       <ModalSliderBasic id="default_slider" pagination-id="default_slider_Pagination" :slide-data="items" :autoplay="false">
         <template #default="{ slotSlideData, slotIndex }">
           <div class="swiper-slide" v-for="slide in slotSlideData" :key="slide.src">
-            <img class="size-full aspect-[16/9] rounded-xl object-cover" :src="fetchImg(slide)" alt="slide" />
+            <img class="size-full aspect-[16/9] rounded-xl object-cover" :src="slide" alt="slide" />
           </div>
         </template>
       </ModalSliderBasic>
@@ -33,7 +33,7 @@ const items = ref([
       <ModalSliderCenter id="center_slider" pagination-id="center_slider_Pagination" :slide-data="items" :autoplay="false">
         <template #default="{ slotSlideData, slotIndex }">
           <div class="swiper-slide" v-for="slide in slotSlideData" :key="slide.src">
-            <img class="size-full aspect-[16/9] rounded-xl object-cover" :src="fetchImg(slide)" alt="slide" />
+            <img class="size-full aspect-[16/9] rounded-xl object-cover" :src="slide" alt="slide" />
           </div>
         </template>
       </ModalSliderCenter>
