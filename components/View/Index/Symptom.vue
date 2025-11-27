@@ -73,6 +73,9 @@ const data = ref([{}, {}, {}, {}, {}, {}])
       </div>
     </div>
   </div>
+  <div class="w-[854px] mx-auto cursor-pointer pb-[120px]">
+    <img src="/images/symptom/talk.png" alt="">
+  </div>
 </template>
 
 <style scoped></style>
