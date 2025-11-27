@@ -10,12 +10,11 @@ await useLoadingHandler().setLoadingComplete()
 <template>
   <div>
     <LayoutHeader :data="allData?.menu" />
-    <main class="mx-auto min-h-screen max-w-[1920px] pt-[70px]">
+    <main class="mx-auto pt-[86px]">
       <slot />
     </main>
     <LayoutFooter />
     <div id="modalsField" class="pointer-events-none fixed inset-0 z-[2000]"></div>
-    <!-- <Cursor colorful /> -->
   </div>
 </template>
 

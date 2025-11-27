@@ -16,14 +16,14 @@ export default {
       md: '744px',
       lg: '1025px',
       xl: '1280px',
-      '2xl': '1536px',
+      '2xl': '1440px',
       '3xl': '1920px',
       '4xl': '2400px',
       '5xl': '3500px',
       '6xl': '4400px',
     },
     fontFamily: {
-      Noto: ['Noto Sans TC', 'sans-serif']
+      Noto: ['Noto Sans TC', 'sans-serif'],
     },
     fontWeight: {
       thin: 100,
@@ -131,6 +131,10 @@ export default {
       },
       backdropBlur: {
         DEFAULT: '10px',
+      },
+      boxShadow: {
+        nav: '0 2px 8px 0 rgba(0, 0, 0, 0.1)',
+        symptom: '0.73px 0.73px 13.18px 0 rgba(181, 128, 67, 0.15)',
       },
     },
   },

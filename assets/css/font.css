@@ -1,7 +1,0 @@
-@layer layout{
-  @font-face {
-    font-family: 'Montserrat';
-    font-weight: regular;
-    src: url('@/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('opentype');
-  }
-}
